@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A1539" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>UniTour #2 — İSÜ Blockchain & Finance</title>
+  <meta name="description" content="Garanti BBVA Kripto × Avalanche Team1 Türkiye, İstinye Üniversitesi'nde. 6 Mayıs 2026 etkinliğinin geri bildirim ve hatıra sayfası." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="UniTour #2 — İSÜ Blockchain" />
+  <meta property="og:description" content="Garanti BBVA Kripto × Avalanche Team1 Türkiye İSÜ kampüsünde. Etkinliğe katıldıysan 2 dakikanı ayır, geri bildirimini bırak." />
+  <meta property="og:image" content="./og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            ink:   { 950: '#05091F', 900: '#0A1539', 800: '#0F1F4D', 700: '#16307A' },
+            sky:   { brand: '#3B9EFF', deep: '#0066FF' },
+            accent:{ red: '#E84142', gold: '#F5C04A' },
+          },
+          boxShadow: {
+            glow: '0 0 60px -10px rgba(59,158,255,0.55)',
+            card: '0 20px 60px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06) inset',
+          },
+          animation: {
+            'fade-up': 'fadeUp .6s ease-out both',
+            'pulse-slow': 'pulse 4s cubic-bezier(.4,0,.6,1) infinite',
+            'shine': 'shine 6s linear infinite',
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: 0, transform: 'translateY(16px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+            shine:  { '0%': { backgroundPosition: '0% 50%' }, '100%': { backgroundPosition: '200% 50%' } },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(1200px 800px at 10% -10%, #16307A 0%, transparent 60%),
+                  radial-gradient(1000px 700px at 110% 10%, #0066FF22 0%, transparent 60%),
+                  linear-gradient(180deg, #05091F 0%, #0A1539 50%, #05091F 100%);
+      color: #E6ECFF;
+      min-height: 100vh;
+    }
+    /* Subtle grid */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    }
+    /* Glass card */
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    /* Gradient text */
+    .text-gradient {
+      background: linear-gradient(120deg, #FFFFFF 0%, #B5D5FF 40%, #3B9EFF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    /* Animated shine on CTA */
+    .shine-bg {
+      background: linear-gradient(110deg, #3B9EFF 0%, #0066FF 40%, #3B9EFF 60%, #0066FF 100%);
+      background-size: 200% 100%;
+      animation: shine 6s linear infinite;
+    }
+    /* Avatar gradient */
+    .avatar-grad {
+      background:
+        radial-gradient(120% 120% at 0% 0%, #3B9EFF 0%, transparent 60%),
+        radial-gradient(120% 120% at 100% 100%, #0066FF 0%, transparent 60%),
+        #0F1F4D;
+    }
+    /* Reveal-on-scroll utility (no JS dep needed if disabled) */
+    [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity .7s ease-out, transform .7s ease-out; }
+    [data-reveal].is-in { opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-pulse-slow, .shine-bg, .animate-shine { animation: none !important; }
+      [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-sky-brand/30 selection:text-white">
+
+  <!-- Background grid layer -->
+  <div aria-hidden="true" class="fixed inset-0 grid-bg pointer-events-none -z-10"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-ink-950/60 border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 group">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-sky-brand to-sky-deep shadow-glow">
+          <span class="font-display font-bold text-white text-sm">U2</span>
+        </span>
+        <span class="text-sm font-semibold tracking-tight">UniTour <span class="text-sky-brand">#2</span></span>
+      </a>
+      <nav class="flex items-center gap-1.5 sm:gap-3">
+        <a href="#anket" class="text-xs sm:text-sm font-medium text-white/80 hover:text-white px-2 sm:px-3 py-1.5 rounded-lg hover:bg-white/5 transition">Anket</a>
+        <a href="#konusmacilar" class="hidden sm:inline-flex text-sm font-medium text-white/80 hover:text-white px-3 py-1.5 rounded-lg hover:bg-white/5 transition">Konuşmacılar</a>
+        <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold bg-white text-ink-900 px-3 py-1.5 rounded-lg hover:bg-white/90 transition">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.74.07-.96.04-1.48.2-1.83.34-.46.18-.79.4-1.13.74-.34.34-.56.67-.74 1.13-.14.35-.3.87-.34 1.83C3.96 8.5 3.96 8.85 3.96 12s0 3.5.07 4.74c.04.96.2 1.48.34 1.83.18.46.4.79.74 1.13.34.34.67.56 1.13.74.35.14.87.3 1.83.34 1.24.07 1.59.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.48-.2 1.83-.34a3 3 0 0 0 1.13-.74c.34-.34.56-.67.74-1.13.14-.35.3-.87.34-1.83.07-1.24.07-1.59.07-4.74s0-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.83a3 3 0 0 0-.74-1.13 3 3 0 0 0-1.13-.74c-.35-.14-.87-.3-1.83-.34C15.5 4 15.15 4 12 4zm0 3.05a4.95 4.95 0 1 1 0 9.9 4.95 4.95 0 0 1 0-9.9zm0 1.8a3.15 3.15 0 1 0 0 6.3 3.15 3.15 0 0 0 0-6.3zm5.25-2.05a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+          <span>@isublockchain</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" class="relative">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 pb-10 sm:pb-16">
+
+      <div class="flex items-center gap-2 mb-6 animate-fade-up">
+        <span class="relative inline-flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+        </span>
+        <span class="text-xs font-semibold tracking-[0.18em] text-emerald-300 uppercase">Etkinlik tamamlandı</span>
+      </div>
+
+      <h1 class="font-display font-bold text-4xl sm:text-6xl md:text-7xl leading-[1.02] tracking-tight animate-fade-up">
+        <span class="text-gradient">UniTour #2</span><br/>
+        <span class="text-white/95">İSÜ kampüsünde<br class="hidden sm:block"/> tamamlandı.</span>
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-base sm:text-lg text-white/70 leading-relaxed animate-fade-up">
+        <span class="text-white font-semibold">Garanti BBVA Kripto</span> ve <span class="text-white font-semibold">Avalanche Team1 Türkiye</span> ekibini
+        İstinye Üniversitesi'nde ağırladık. Web3'ün geleceğini birlikte konuştuk, bağlantılar kurduk.
+      </p>
+
+      <!-- Meta strip -->
+      <div class="mt-8 flex flex-wrap gap-2 sm:gap-3 animate-fade-up">
+        <div class="glass rounded-xl px-4 py-3 flex items-center gap-2.5">
+          <svg class="w-4 h-4 text-sky-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <span class="text-sm"><b class="font-semibold">6 Mayıs 2026</b><span class="text-white/50"> · Çarşamba · 13.00</span></span>
+        </div>
+        <div class="glass rounded-xl px-4 py-3 flex items-center gap-2.5">
+          <svg class="w-4 h-4 text-sky-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="text-sm"><b class="font-semibold">İSÜ Konferans Salonu</b><span class="text-white/50"> · V-123</span></span>
+        </div>
+        <div class="glass rounded-xl px-4 py-3 flex items-center gap-2.5">
+          <svg class="w-4 h-4 text-sky-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="text-sm"><b class="font-semibold">3 konuşmacı</b><span class="text-white/50"> · Q&A · networking</span></span>
+        </div>
+      </div>
+
+      <!-- Primary CTA -->
+      <div class="mt-10 animate-fade-up">
+        <a href="#anket" class="inline-flex items-center gap-3 rounded-2xl px-6 py-4 shine-bg shadow-glow text-white font-semibold text-base sm:text-lg group">
+          <span>Geri bildirimini bırak</span>
+          <span class="text-white/80 text-sm font-normal hidden sm:inline">·  2 dakika</span>
+          <svg class="w-5 h-5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <p class="mt-3 text-xs text-white/50">Bir sonraki UniTour'u senin için daha iyi yapacağız.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ANKET CTA — primary action ===== -->
+  <section id="anket" class="relative scroll-mt-20">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div data-reveal class="relative overflow-hidden rounded-3xl p-7 sm:p-10 glass shadow-card">
+        <div aria-hidden="true" class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-sky-deep/40 blur-3xl"></div>
+        <div aria-hidden="true" class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-sky-brand/30 blur-3xl"></div>
+
+        <div class="relative grid sm:grid-cols-[1fr_auto] gap-6 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-sky-brand">
+              <span class="h-px w-6 bg-sky-brand"></span> Memnuniyet Anketi
+            </div>
+            <h2 class="mt-3 font-display font-bold text-2xl sm:text-4xl tracking-tight">
+              Etkinliği nasıl buldun?
+            </h2>
+            <p class="mt-3 text-white/70 max-w-xl">
+              11 kısa soru, ~2 dakika. Cevapların anonim. Her geri bildirim, bir sonraki UniTour'un yolunu çiziyor.
+            </p>
+          </div>
+
+          <div class="flex sm:flex-col gap-3 sm:items-end">
+            <a id="survey-link" href="#" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-4 bg-white text-ink-900 font-semibold hover:bg-white/90 transition w-full sm:w-auto">
+              Ankete başla
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <span class="text-xs text-white/50">Google Forms üzerinden</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KONUŞMACILAR ===== -->
+  <section id="konusmacilar" class="relative scroll-mt-20 mt-16 sm:mt-24">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="flex items-end justify-between mb-8" data-reveal>
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-sky-brand">
+            <span class="h-px w-6 bg-sky-brand"></span> Konuşmacılar
+          </div>
+          <h2 class="mt-3 font-display font-bold text-2xl sm:text-4xl tracking-tight">Sahnedeki ekip</h2>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-4">
+
+        <article data-reveal class="glass rounded-2xl p-6 hover:bg-white/[0.07] transition group">
+          <div class="flex items-center gap-4">
+            <div class="avatar-grad h-14 w-14 rounded-2xl flex items-center justify-center font-display font-bold text-white text-lg shadow-glow">BD</div>
+            <div>
+              <h3 class="font-semibold tracking-tight">Batuhan Demir</h3>
+              <p class="text-xs text-white/60 mt-0.5">Business Development Manager</p>
+            </div>
+          </div>
+          <div class="mt-5 inline-flex items-center gap-2 text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Garanti BBVA Kripto
+          </div>
+        </article>
+
+        <article data-reveal class="glass rounded-2xl p-6 hover:bg-white/[0.07] transition group">
+          <div class="flex items-center gap-4">
+            <div class="avatar-grad h-14 w-14 rounded-2xl flex items-center justify-center font-display font-bold text-white text-lg shadow-glow">HÇ</div>
+            <div>
+              <h3 class="font-semibold tracking-tight">Hürsel Çay</h3>
+              <p class="text-xs text-white/60 mt-0.5">Türkiye Country Lead</p>
+            </div>
+          </div>
+          <div class="mt-5 inline-flex items-center gap-2 text-xs font-medium px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-300 border border-rose-500/20">
+            <span class="h-1.5 w-1.5 rounded-full bg-rose-400"></span> Avalanche Team1
+          </div>
+        </article>
+
+        <article data-reveal class="glass rounded-2xl p-6 hover:bg-white/[0.07] transition group">
+          <div class="flex items-center gap-4">
+            <div class="avatar-grad h-14 w-14 rounded-2xl flex items-center justify-center font-display font-bold text-white text-lg shadow-glow">ÖA</div>
+            <div>
+              <h3 class="font-semibold tracking-tight">Ömer Aksu</h3>
+              <p class="text-xs text-white/60 mt-0.5">Tech Member</p>
+            </div>
+          </div>
+          <div class="mt-5 inline-flex items-center gap-2 text-xs font-medium px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-300 border border-rose-500/20">
+            <span class="h-1.5 w-1.5 rounded-full bg-rose-400"></span> Avalanche Team1 Türkiye
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STAY CONNECTED ===== -->
+  <section class="relative mt-16 sm:mt-24">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="flex items-end justify-between mb-8" data-reveal>
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-sky-brand">
+            <span class="h-px w-6 bg-sky-brand"></span> Bağlantıda kal
+          </div>
+          <h2 class="mt-3 font-display font-bold text-2xl sm:text-4xl tracking-tight">Etkinlik bitti, yolculuk devam ediyor</h2>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+
+        <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener"
+           data-reveal data-utm-link="instagram"
+           class="glass rounded-2xl p-6 group hover:bg-white/[0.07] transition flex items-center gap-5">
+          <div class="h-14 w-14 rounded-2xl flex items-center justify-center shrink-0"
+               style="background: linear-gradient(135deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%);">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.74.07-.96.04-1.48.2-1.83.34-.46.18-.79.4-1.13.74-.34.34-.56.67-.74 1.13-.14.35-.3.87-.34 1.83C3.96 8.5 3.96 8.85 3.96 12s0 3.5.07 4.74c.04.96.2 1.48.34 1.83.18.46.4.79.74 1.13.34.34.67.56 1.13.74.35.14.87.3 1.83.34 1.24.07 1.59.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.48-.2 1.83-.34a3 3 0 0 0 1.13-.74c.34-.34.56-.67.74-1.13.14-.35.3-.87.34-1.83.07-1.24.07-1.59.07-4.74s0-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.83a3 3 0 0 0-.74-1.13 3 3 0 0 0-1.13-.74c-.35-.14-.87-.3-1.83-.34C15.5 4 15.15 4 12 4zm0 3.05a4.95 4.95 0 1 1 0 9.9 4.95 4.95 0 0 1 0-9.9zm0 1.8a3.15 3.15 0 1 0 0 6.3 3.15 3.15 0 0 0 0-6.3zm5.25-2.05a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-xs uppercase tracking-[0.16em] text-white/50">Instagram</div>
+            <div class="font-display font-semibold text-lg sm:text-xl truncate">@isublockchain</div>
+            <div class="text-sm text-white/60 mt-0.5">Etkinlik fotoğrafları, duyurular, bir sonraki UniTour</div>
+          </div>
+          <svg class="w-5 h-5 text-white/40 group-hover:text-white group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+
+        <a href="https://luma.com/unitour2-isu" target="_blank" rel="noopener"
+           data-reveal data-utm-link="luma"
+           class="glass rounded-2xl p-6 group hover:bg-white/[0.07] transition flex items-center gap-5">
+          <div class="h-14 w-14 rounded-2xl flex items-center justify-center bg-gradient-to-br from-rose-500 to-rose-700 shrink-0">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v6M12 16v6M2 12h6M16 12h6"/><circle cx="12" cy="12" r="3.5"/></svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="text-xs uppercase tracking-[0.16em] text-white/50">Luma</div>
+            <div class="font-display font-semibold text-lg sm:text-xl truncate">Etkinlik sayfası</div>
+            <div class="text-sm text-white/60 mt-0.5">Katılımcı listesi, hatıra fotoğrafları, sonraki etkinlikler</div>
+          </div>
+          <svg class="w-5 h-5 text-white/40 group-hover:text-white group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS ===== -->
+  <section class="relative mt-16 sm:mt-24">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-8" data-reveal>
+        <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase text-white/50">
+          <span class="h-px w-6 bg-white/20"></span>
+          Bu etkinlik birlikte var oldu
+          <span class="h-px w-6 bg-white/20"></span>
+        </div>
+      </div>
+      <div class="glass rounded-2xl p-6 sm:p-8" data-reveal>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-6 items-center text-center">
+          <div class="text-white/80 font-semibold text-sm sm:text-[15px] tracking-tight">Garanti BBVA<br/><span class="text-white/50 font-normal">Kripto</span></div>
+          <div class="text-white/80 font-semibold text-sm sm:text-[15px] tracking-tight">Avalanche<br/><span class="text-white/50 font-normal">Team1 Türkiye</span></div>
+          <div class="text-white/80 font-semibold text-sm sm:text-[15px] tracking-tight">İstinye<br/><span class="text-white/50 font-normal">Üniversitesi</span></div>
+          <div class="text-white/80 font-semibold text-sm sm:text-[15px] tracking-tight">İSÜ Blockchain<br/><span class="text-white/50 font-normal">& Finance</span></div>
+          <div class="text-white/80 font-semibold text-sm sm:text-[15px] tracking-tight">İEK<br/><span class="text-white/50 font-normal">Topluluk</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mt-20 sm:mt-28 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-5 sm:px-8 py-10 grid sm:grid-cols-2 gap-6 items-center">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-sky-brand to-sky-deep">
+            <span class="font-display font-bold text-white text-sm">U2</span>
+          </span>
+          <span class="text-sm font-semibold tracking-tight">UniTour #2 — İSÜ</span>
+        </div>
+        <p class="mt-3 text-xs text-white/50 max-w-md leading-relaxed">
+          UniTour, İSÜ Blockchain & Finance topluluğunun bahar dönemi üniversite turudur. Her durakta farklı bir Web3 ekibi.
+        </p>
+      </div>
+      <div class="sm:text-right">
+        <div class="flex sm:justify-end gap-3">
+          <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener" class="text-xs text-white/60 hover:text-white">@isublockchain</a>
+          <span class="text-white/20">·</span>
+          <a href="https://luma.com/unitour2-isu" target="_blank" rel="noopener" class="text-xs text-white/60 hover:text-white">Luma</a>
+        </div>
+        <p class="mt-3 text-[11px] text-white/30">© 2026 İSÜ Blockchain & Finance · Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // ----- Survey URL injection (config) -----
+    // Google Forms linkini buraya yapıştır. Boşken buton "Anket yakında" olur.
+    const SURVEY_URL = "REPLACE_WITH_GOOGLE_FORM_URL";
+
+    (function () {
+      const link = document.getElementById('survey-link');
+      if (!link) return;
+      if (SURVEY_URL && SURVEY_URL.startsWith('http')) {
+        // UTM ekle
+        const url = new URL(SURVEY_URL);
+        url.searchParams.set('utm_source', 'qr');
+        url.searchParams.set('utm_medium', 'event');
+        url.searchParams.set('utm_campaign', 'unitour2_isu');
+        link.href = url.toString();
+      } else {
+        link.removeAttribute('href');
+        link.classList.add('opacity-60', 'pointer-events-none');
+        link.querySelector('span') && (link.firstElementChild.textContent = 'Anket yakında');
+      }
+    })();
+
+    // ----- UTM ekle: Instagram & Luma linkleri -----
+    document.querySelectorAll('[data-utm-link]').forEach((a) => {
+      try {
+        const u = new URL(a.href);
+        u.searchParams.set('utm_source', 'qr');
+        u.searchParams.set('utm_medium', 'event');
+        u.searchParams.set('utm_campaign', 'unitour2_isu');
+        u.searchParams.set('utm_content', a.dataset.utmLink);
+        a.href = u.toString();
+      } catch (e) { /* noop */ }
+    });
+
+    // ----- Reveal on scroll -----
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+      document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
+    }
+  </script>
+
+</body>
+</html>
