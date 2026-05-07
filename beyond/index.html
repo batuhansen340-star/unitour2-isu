@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0A1539" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Beyond the Chain '26 — İSÜ Blockchain & Finance</title>
+  <meta name="description" content="15 Mayıs 2026 — Yapay zeka, finans, blockchain, kariyer ve Web3 zirvesi. İstinye Üniversitesi Vadi Ana Kampüs Konferans Salonu." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beyond the Chain '26 — Akış" />
+  <meta property="og:description" content="15 Mayıs 2026 · 12.00–16.30 · İSÜ Vadi Kampüs · 5 oturum + networking" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          },
+          colors: {
+            ink:   { 950: '#05091F', 900: '#0A1539', 800: '#0F1F4D', 700: '#16307A' },
+            sky:   { brand: '#3B9EFF', deep: '#0066FF' },
+            cream: '#F5F1E8',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(1000px 700px at 15% -10%, #16307A 0%, transparent 55%),
+                  radial-gradient(900px 600px at 110% 20%, rgba(0,102,255,0.25) 0%, transparent 60%),
+                  linear-gradient(180deg, #05091F 0%, #0A1539 50%, #05091F 100%);
+      color: #E6ECFF;
+      min-height: 100vh;
+    }
+    .display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .hairline { background: linear-gradient(90deg, transparent, rgba(59,158,255,0.4), transparent); height: 1px; }
+    .timeline-dot::before {
+      content: ''; position: absolute; left: -28px; top: 8px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #3B9EFF; box-shadow: 0 0 0 4px rgba(59,158,255,0.18), 0 0 0 8px rgba(59,158,255,0.06);
+    }
+    .timeline-line {
+      position: absolute; left: -22.5px; top: 24px; bottom: -16px;
+      width: 1px; background: linear-gradient(180deg, rgba(59,158,255,0.4), rgba(59,158,255,0.05));
+    }
+    [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity .7s ease-out, transform .7s ease-out; }
+    [data-reveal].is-in { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; } }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-sky-brand/30 selection:text-white">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-ink-950/60 border-b border-white/5">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2.5">
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded bg-ink-900 border border-sky-brand/40">
+          <span class="display font-bold text-white text-sm">İ</span>
+        </span>
+        <span class="display text-base font-semibold tracking-tight">Beyond the Chain <span class="italic text-sky-brand">'26</span></span>
+      </a>
+      <a href="#akis" class="text-xs sm:text-sm font-medium text-white/80 hover:text-white px-3 py-1.5 rounded hover:bg-white/5 transition">Akış</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 pb-10 text-center">
+      <p class="text-[11px] sm:text-xs uppercase tracking-[0.32em] text-sky-brand display italic mb-6">İSÜ Blockchain &amp; Finance · Zirve</p>
+
+      <h1 class="display font-bold text-5xl sm:text-7xl leading-[1.05] tracking-tight">
+        Beyond the Chain
+      </h1>
+      <p class="display italic text-3xl sm:text-5xl text-sky-brand mt-2">'26</p>
+
+      <p class="mt-8 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl mx-auto">
+        Yapay zeka, finans, blockchain teknolojileri, kariyer yolculuğu ve Web3 üzerine
+        bir günlük buluşma.
+      </p>
+
+      <div class="hairline mt-10 mx-auto max-w-xs"></div>
+
+      <!-- Meta -->
+      <div class="mt-10 grid grid-cols-3 gap-2 sm:gap-6 max-w-xl mx-auto">
+        <div class="display">
+          <p class="text-[10px] tracking-[0.25em] text-sky-brand uppercase mb-2">Tarih</p>
+          <p class="text-lg sm:text-2xl font-semibold tracking-tight">15 Mayıs</p>
+          <p class="text-xs sm:text-sm italic text-white/60 mt-1">Cuma · 2026</p>
+        </div>
+        <div class="display border-x border-white/10">
+          <p class="text-[10px] tracking-[0.25em] text-sky-brand uppercase mb-2">Saat</p>
+          <p class="text-lg sm:text-2xl font-semibold tracking-tight">12.00 – 16.30</p>
+          <p class="text-xs sm:text-sm italic text-white/60 mt-1">5 oturum</p>
+        </div>
+        <div class="display">
+          <p class="text-[10px] tracking-[0.25em] text-sky-brand uppercase mb-2">Yer</p>
+          <p class="text-lg sm:text-2xl font-semibold tracking-tight">İSÜ</p>
+          <p class="text-xs sm:text-sm italic text-white/60 mt-1">Vadi Kampüs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMALAR -->
+  <section class="relative">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 mt-6">
+      <div class="glass rounded-2xl p-6 sm:p-8" data-reveal>
+        <p class="text-[10px] tracking-[0.32em] text-sky-brand uppercase display italic text-center mb-5">Beş Tema · Bir Gün</p>
+        <div class="grid grid-cols-5 gap-2 sm:gap-4 text-center">
+          <div>
+            <p class="display font-semibold text-sm sm:text-base">Yapay Zeka</p>
+          </div>
+          <div>
+            <p class="display font-semibold text-sm sm:text-base">Finans</p>
+          </div>
+          <div>
+            <p class="display font-semibold text-sm sm:text-base">Blockchain</p>
+          </div>
+          <div>
+            <p class="display font-semibold text-sm sm:text-base">Kariyer</p>
+          </div>
+          <div>
+            <p class="display font-semibold text-sm sm:text-base">Web3</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AKIŞ -->
+  <section id="akis" class="relative scroll-mt-20 mt-16 sm:mt-20">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <div class="text-center mb-10" data-reveal>
+        <p class="text-[10px] tracking-[0.32em] text-sky-brand uppercase display italic mb-4">Programı</p>
+        <h2 class="display font-bold text-4xl sm:text-6xl tracking-tight">Akış</h2>
+      </div>
+
+      <ol class="relative pl-8 sm:pl-10 space-y-6">
+
+        <li class="relative timeline-dot" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">11.30 – 12.00</p>
+            <p class="display font-semibold text-xl sm:text-2xl tracking-tight">Kayıt</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">Konferans salonu girişi · isim okutma · katılımcı kartı</p>
+        </li>
+
+        <li class="relative timeline-dot" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">12.00 – 12.40</p>
+            <p class="display font-semibold text-xl sm:text-2xl tracking-tight">Kıvanç Güler</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">Açılış oturumu</p>
+        </li>
+
+        <li class="relative timeline-dot" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">12.50 – 13.20</p>
+            <p class="display font-semibold text-xl sm:text-2xl tracking-tight">Oya Aydınlık &amp; Emine Zengin</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">Çift sunum</p>
+        </li>
+
+        <li class="relative timeline-dot" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">13.30 – 13.50</p>
+            <p class="display font-semibold text-xl sm:text-2xl tracking-tight">Rlay Hub</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">Topluluk tanıtımı</p>
+        </li>
+
+        <li class="relative timeline-dot opacity-70" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">13.50 – 13.55</p>
+            <p class="display font-medium text-base sm:text-lg italic text-white/70">Mola</p>
+          </div>
+        </li>
+
+        <li class="relative timeline-dot" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">13.55 – 14.20</p>
+            <p class="display font-semibold text-xl sm:text-2xl tracking-tight">Irmak Ceylan</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">İstanbul Blockchain Women (IBW)</p>
+        </li>
+
+        <li class="relative timeline-dot opacity-70" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">14.20 – 14.50</p>
+            <p class="display font-medium text-base sm:text-lg italic text-white/80">Yemek arası</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">Pizza &amp; içecek ikramı</p>
+        </li>
+
+        <li class="relative timeline-dot" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">14.50 – 15.30</p>
+            <p class="display font-semibold text-xl sm:text-2xl tracking-tight">Turan Sert</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">Ana oturum</p>
+        </li>
+
+        <li class="relative timeline-dot opacity-70" data-reveal>
+          <span class="timeline-line"></span>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">15.30 – 15.40</p>
+            <p class="display font-medium text-base sm:text-lg italic text-white/70">Mola</p>
+          </div>
+        </li>
+
+        <li class="relative timeline-dot" data-reveal>
+          <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <p class="display italic text-sky-brand text-lg sm:text-xl tabular-nums">15.40 – 16.30</p>
+            <p class="display font-semibold text-xl sm:text-2xl tracking-tight">Yağız Sabuncuoğlu × Göktuğ Çağrıcı</p>
+          </div>
+          <p class="text-sm text-white/55 mt-1 italic display">Kapanış paneli</p>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- YER -->
+  <section class="relative mt-16 sm:mt-20">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8">
+      <div class="glass rounded-2xl p-6 sm:p-8" data-reveal>
+        <div class="flex items-start gap-4">
+          <div class="shrink-0 mt-1">
+            <svg class="w-5 h-5 text-sky-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="text-[10px] tracking-[0.25em] text-sky-brand uppercase display italic mb-2">Mekan</p>
+            <p class="display font-semibold text-2xl sm:text-3xl tracking-tight">İstinye Üniversitesi</p>
+            <p class="display italic text-white/70 mt-1">Vadi Ana Kampüs · Konferans Salonu</p>
+            <a href="https://maps.apple.com/?q=İstinye+Üniversitesi+Vadi+Kampüs" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-1.5 mt-4 text-sm text-sky-brand hover:text-white transition">
+              Haritada aç
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAĞLANTI -->
+  <section class="relative mt-16 sm:mt-20">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+      <p class="text-[10px] tracking-[0.32em] text-sky-brand uppercase display italic mb-4">Bağlantıda kal</p>
+      <h2 class="display font-bold text-3xl sm:text-5xl tracking-tight mb-8">Topluluğu takip et</h2>
+
+      <div class="grid sm:grid-cols-2 gap-3 max-w-xl mx-auto">
+        <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener" data-utm="instagram"
+           class="glass rounded-xl p-5 hover:bg-white/[0.07] transition flex items-center gap-4 text-left">
+          <div class="h-10 w-10 rounded-lg flex items-center justify-center shrink-0"
+               style="background: linear-gradient(135deg, #F58529 0%, #DD2A7B 50%, #8134AF 100%);">
+            <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5 0-4.74.07-.96.04-1.48.2-1.83.34-.46.18-.79.4-1.13.74-.34.34-.56.67-.74 1.13-.14.35-.3.87-.34 1.83C3.96 8.5 3.96 8.85 3.96 12s0 3.5.07 4.74c.04.96.2 1.48.34 1.83.18.46.4.79.74 1.13.34.34.67.56 1.13.74.35.14.87.3 1.83.34 1.24.07 1.59.07 4.74.07s3.5 0 4.74-.07c.96-.04 1.48-.2 1.83-.34a3 3 0 0 0 1.13-.74c.34-.34.56-.67.74-1.13.14-.35.3-.87.34-1.83.07-1.24.07-1.59.07-4.74s0-3.5-.07-4.74c-.04-.96-.2-1.48-.34-1.83a3 3 0 0 0-.74-1.13 3 3 0 0 0-1.13-.74c-.35-.14-.87-.3-1.83-.34C15.5 4 15.15 4 12 4zm0 3.05a4.95 4.95 0 1 1 0 9.9 4.95 4.95 0 0 1 0-9.9zm0 1.8a3.15 3.15 0 1 0 0 6.3 3.15 3.15 0 0 0 0-6.3zm5.25-2.05a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="display font-semibold text-base">@isublockchain</p>
+            <p class="text-xs text-white/50">Etkinlik fotoğrafları, duyurular</p>
+          </div>
+        </a>
+
+        <a href="mailto:isublockchain@gmail.com" data-utm="email"
+           class="glass rounded-xl p-5 hover:bg-white/[0.07] transition flex items-center gap-4 text-left">
+          <div class="h-10 w-10 rounded-lg flex items-center justify-center shrink-0 bg-ink-700 border border-sky-brand/30">
+            <svg class="w-5 h-5 text-sky-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l9 6 9-6M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="display font-semibold text-base">İletişim</p>
+            <p class="text-xs text-white/50 truncate">isublockchain@gmail.com</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-20 sm:mt-24 border-t border-white/5">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-10 text-center">
+      <p class="display italic text-sky-brand text-sm mb-2">İSÜ Blockchain &amp; Finance</p>
+      <p class="display text-2xl font-bold tracking-tight">Beyond the Chain <span class="italic text-sky-brand">'26</span></p>
+      <div class="hairline mx-auto max-w-xs my-6"></div>
+      <p class="text-xs text-white/40">© 2026 İstinye Üniversitesi Blockchain &amp; Finance Topluluğu</p>
+    </div>
+  </footer>
+
+  <script>
+    // UTM ekle
+    document.querySelectorAll('[data-utm]').forEach((a) => {
+      try {
+        if (!a.href.startsWith('http')) return;
+        const u = new URL(a.href);
+        u.searchParams.set('utm_source', 'qr');
+        u.searchParams.set('utm_medium', 'event');
+        u.searchParams.set('utm_campaign', 'beyond_chain_26');
+        u.searchParams.set('utm_content', a.dataset.utm);
+        a.href = u.toString();
+      } catch (e) {}
+    });
+
+    // Reveal on scroll
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('[data-reveal]').forEach((el) => io.observe(el));
+    } else {
+      document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
+    }
+  </script>
+</body>
+</html>
