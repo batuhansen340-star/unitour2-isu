@@ -3,95 +3,129 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#1A0E2E" />
+  <meta name="theme-color" content="#0A1539" />
   <meta name="color-scheme" content="dark" />
 
   <title>Beyond The Chain '26 Zirvesi</title>
-  <meta name="description" content="İstinye Üniversitesi Blockchain ve Finans Kulübü — Beyond The Chain '26 Zirvesi" />
+  <meta name="description" content="İstinye Üniversitesi Blockchain ve Finans Kulübü — 15 Mayıs 2026 · Yapay zeka, finans, blockchain ve Web3 zirvesi." />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Beyond The Chain '26 Zirvesi" />
-  <meta property="og:description" content="İstinye Üniversitesi Blockchain ve Finans Kulübü" />
+  <meta property="og:description" content="İstinye Üniversitesi · 15 Mayıs 2026 · Yapay Zeka · Finans · Blockchain · Kariyer · Web3" />
 
+  <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: {
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        },
+        colors: {
+          ink:   { 950: '#05091F', 900: '#0A1539', 800: '#0F1F4D', 700: '#16307A' },
+          sky:   { brand: '#3B9EFF', deep: '#0066FF' },
+        },
+      }},
+    };
+  </script>
 
   <style>
-    html { -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background:
-        radial-gradient(ellipse 80% 60% at 50% 50%, rgba(123, 70, 178, 0.55) 0%, rgba(74, 42, 117, 0.25) 35%, transparent 70%),
-        linear-gradient(180deg, #0A0518 0%, #1A0E2E 25%, #2A1A55 50%, #1A0E2E 75%, #0A0518 100%);
-      color: #FFFFFF;
+        radial-gradient(900px 700px at 15% -5%, #16307A 0%, transparent 55%),
+        radial-gradient(800px 600px at 110% 25%, rgba(0,102,255,0.22) 0%, transparent 60%),
+        radial-gradient(1100px 800px at 50% 100%, rgba(59,158,255,0.10) 0%, transparent 65%),
+        linear-gradient(180deg, #05091F 0%, #0A1539 25%, #16307A 55%, #0A1539 80%, #05091F 100%);
+      color: #E6ECFF;
       min-height: 100vh;
     }
+    .display { font-family: 'Cormorant Garamond', Georgia, serif; }
 
-    /* Linktree-style pill: ince beyaz outline + iç mor stage-light + three-dot sağ */
+    /* Linktree-tarzı pill kart (mavi glow ile) */
     .pill {
-      position: relative;
-      display: block;
-      width: 100%;
-      padding: 14px 44px 14px 52px;       /* sol: icon, sağ: three-dot */
-      border-radius: 12px;
+      position: relative; display: block; width: 100%;
+      padding: 14px 44px 14px 52px;
+      border-radius: 14px;
       background:
-        radial-gradient(150% 280% at 50% 50%, rgba(180, 130, 240, 0.32) 0%, rgba(120, 80, 180, 0.10) 50%, transparent 80%);
-      border: 1px solid rgba(255, 255, 255, 0.30);
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-      text-align: center;
-      color: #FFFFFF;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 1.2;
+        radial-gradient(150% 280% at 50% 50%, rgba(59,158,255,0.32) 0%, rgba(0,102,255,0.10) 50%, transparent 80%);
+      border: 1px solid rgba(255,255,255,0.22);
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      text-align: center; color: #FFFFFF;
+      font-weight: 500; font-size: 15px; line-height: 1.2;
     }
     .pill:hover {
       background:
-        radial-gradient(150% 280% at 50% 50%, rgba(200, 150, 255, 0.42) 0%, rgba(155, 100, 220, 0.16) 50%, transparent 80%);
-      border-color: rgba(255, 255, 255, 0.45);
+        radial-gradient(150% 280% at 50% 50%, rgba(80,180,255,0.42) 0%, rgba(0,102,255,0.16) 50%, transparent 80%);
+      border-color: rgba(255,255,255,0.36);
       transform: translateY(-1px);
     }
     .pill .pill-icon {
       position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
       width: 24px; height: 24px;
       display: flex; align-items: center; justify-content: center;
-      border-radius: 5px;
-      flex-shrink: 0;
+      border-radius: 5px; flex-shrink: 0;
     }
     .pill .pill-dots {
       position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
-      color: rgba(255, 255, 255, 0.55);
-      width: 16px; height: 16px;
+      color: rgba(255,255,255,0.55); width: 16px; height: 16px;
     }
 
-    /* Bottom Linktree CTA */
+    /* Bottom CTA pill */
     .pill-cta {
       display: inline-flex; align-items: center; justify-content: center;
       padding: 10px 22px;
       border-radius: 999px;
-      background: rgba(20, 12, 35, 0.85);
+      background: rgba(10,15,40,0.85);
       color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.30);
+      border: 1px solid rgba(255,255,255,0.30);
       font-weight: 500; font-size: 14px;
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      transition: background 0.18s ease, transform 0.18s ease;
+      transition: background .18s ease, transform .18s ease;
     }
-    .pill-cta:hover { background: rgba(40, 25, 65, 0.95); transform: translateY(-1px); }
+    .pill-cta:hover { background: rgba(20,40,80,0.95); transform: translateY(-1px); }
 
-    [data-reveal] { opacity: 0; transform: translateY(6px); transition: opacity .5s ease-out, transform .5s ease-out; }
+    /* Glass kart (içerik kutuları) */
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    .hairline { background: linear-gradient(90deg, transparent, rgba(59,158,255,0.45), transparent); height: 1px; }
+
+    /* Akış timeline */
+    .tl-item { position: relative; padding-left: 26px; }
+    .tl-item::before {
+      content: ''; position: absolute; left: 0; top: 9px;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: #3B9EFF;
+      box-shadow: 0 0 0 4px rgba(59,158,255,0.18);
+    }
+    .tl-line {
+      position: absolute; left: 4px; top: 22px; bottom: -14px;
+      width: 1px; background: linear-gradient(180deg, rgba(59,158,255,0.35), rgba(59,158,255,0.05));
+    }
+    .tl-pause::before { background: rgba(255,255,255,0.35) !important; box-shadow: 0 0 0 3px rgba(255,255,255,0.06) !important; }
+
+    [data-reveal] { opacity: 0; transform: translateY(8px); transition: opacity .55s ease-out, transform .55s ease-out; }
     [data-reveal].is-in { opacity: 1; transform: translateY(0); }
     @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; } }
   </style>
 </head>
 
-<body class="antialiased selection:bg-purple-400/30 selection:text-white">
+<body class="antialiased selection:bg-sky-brand/30 selection:text-white">
 
-  <main class="max-w-[440px] mx-auto px-5 pt-10 sm:pt-14 pb-10">
+  <main class="max-w-[460px] mx-auto px-5 pt-10 sm:pt-14 pb-12">
 
-    <!-- LOGO (resmi ISU Blockchain & Finance) -->
+    <!-- LOGO -->
     <div class="flex justify-center mb-4">
       <div class="bg-white rounded-2xl px-4 py-3 shadow-xl">
         <img src="assets/logo.png" alt="İSÜ Blockchain ve Finans Kulübü"
@@ -100,111 +134,86 @@
     </div>
 
     <!-- BAŞLIK -->
-    <h1 class="text-center text-[20px] sm:text-[22px] font-bold tracking-tight">
-      Beyond The Chain'26 Zirvesi
+    <h1 class="text-center display font-bold text-[26px] sm:text-[30px] tracking-tight leading-[1.1]">
+      Beyond The Chain<span class="italic font-medium">'26</span> Zirvesi
     </h1>
-    <p class="text-center text-[14px] text-white/85 mt-1 leading-snug">
+    <p class="text-center display italic text-[14px] sm:text-[15px] text-white/80 mt-1.5 leading-snug">
       İstinye Üniversitesi Blockchain ve Finans Kulübü
     </p>
 
-    <!-- ETKİNLİK DETAYLARI -->
-    <div class="mt-5 px-2">
-      <!-- Tarih + saat -->
-      <p class="text-center text-[13px] text-white font-medium tracking-wide">
-        <span class="inline-block">15 Mayıs 2026 · Cuma</span>
-        <span class="mx-1.5 text-white/40">·</span>
-        <span class="inline-block tabular-nums">12.00 – 16.30</span>
+    <!-- META: tarih + saat + lokasyon -->
+    <div class="mt-5">
+      <p class="text-center text-[13px] font-medium text-white tracking-wide">
+        15 Mayıs 2026 · Cuma
+        <span class="mx-1.5 text-sky-brand">·</span>
+        <span class="tabular-nums">12.00 – 16.45</span>
       </p>
-      <!-- Lokasyon -->
-      <p class="text-center text-[12px] text-white/65 mt-1 leading-snug">
+      <p class="text-center display italic text-[12.5px] text-white/65 mt-1 leading-snug">
         İstinye Üniversitesi · Vadi Ana Kampüs · Konferans Salonu
       </p>
-      <!-- 5 tema rozeti -->
-      <div class="mt-4 flex flex-wrap justify-center gap-1.5">
-        <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(155,100,220,0.15);">Yapay Zeka</span>
-        <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(155,100,220,0.15);">Finans</span>
-        <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(155,100,220,0.15);">Blockchain</span>
-        <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(155,100,220,0.15);">Kariyer</span>
-        <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(155,100,220,0.15);">Web3</span>
-      </div>
+    </div>
+
+    <!-- 5 TEMA ROZETİ -->
+    <div class="mt-4 flex flex-wrap justify-center gap-1.5">
+      <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(59,158,255,0.12);">Yapay Zeka</span>
+      <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(59,158,255,0.12);">Finans</span>
+      <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(59,158,255,0.12);">Blockchain</span>
+      <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(59,158,255,0.12);">Kariyer</span>
+      <span class="text-[10.5px] tracking-wide text-white/85 px-2.5 py-1 rounded-full border border-white/20" style="background: rgba(59,158,255,0.12);">Web3</span>
     </div>
 
     <!-- 4 SOSYAL İKON -->
     <div class="flex justify-center items-center gap-[22px] mt-6">
-      <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener" data-utm="instagram-icon" aria-label="Instagram"
-         class="text-white/85 hover:text-white transition">
+      <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener" data-utm="instagram-icon" aria-label="Instagram" class="text-white/85 hover:text-white transition">
         <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
       </a>
-      <a href="https://www.youtube.com/@isublockchain" target="_blank" rel="noopener" data-utm="youtube-icon" aria-label="YouTube"
-         class="text-white/85 hover:text-white transition">
+      <a href="https://www.youtube.com/@isublockchain" target="_blank" rel="noopener" data-utm="youtube-icon" aria-label="YouTube" class="text-white/85 hover:text-white transition">
         <svg class="w-[26px] h-[26px]" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
       </a>
-      <a href="https://x.com/isublockchain" target="_blank" rel="noopener" data-utm="x-icon" aria-label="X"
-         class="text-white/85 hover:text-white transition">
+      <a href="https://x.com/isublockchain" target="_blank" rel="noopener" data-utm="x-icon" aria-label="X" class="text-white/85 hover:text-white transition">
         <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       </a>
-      <a href="https://www.linkedin.com/in/istinye-university-blockchain-and-finance-club/" target="_blank" rel="noopener" data-utm="linkedin-icon" aria-label="LinkedIn"
-         class="text-white/85 hover:text-white transition">
+      <a href="https://www.linkedin.com/in/istinye-university-blockchain-and-finance-club/" target="_blank" rel="noopener" data-utm="linkedin-icon" aria-label="LinkedIn" class="text-white/85 hover:text-white transition">
         <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       </a>
     </div>
 
-    <!-- 6 PILL KARTLAR -->
+    <!-- 6 PILL KART -->
     <div class="mt-7 space-y-[10px]">
 
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener" data-utm="instagram"
-         data-reveal class="pill">
-        <span class="pill-icon">
-          <svg class="w-[20px] h-[20px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
-        </span>
+      <a href="https://www.instagram.com/isublockchain/" target="_blank" rel="noopener" data-utm="instagram" data-reveal class="pill">
+        <span class="pill-icon"><svg class="w-[20px] h-[20px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></span>
         Instagram
         <svg class="pill-dots" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="18" r="1.6"/></svg>
       </a>
 
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/istinye-university-blockchain-and-finance-club/" target="_blank" rel="noopener" data-utm="linkedin"
-         data-reveal class="pill">
-        <span class="pill-icon">
-          <svg class="w-[20px] h-[20px] text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </span>
+      <a href="https://www.linkedin.com/in/istinye-university-blockchain-and-finance-club/" target="_blank" rel="noopener" data-utm="linkedin" data-reveal class="pill">
+        <span class="pill-icon"><svg class="w-[20px] h-[20px] text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.063 2.063 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
         LinkedIn
         <svg class="pill-dots" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="18" r="1.6"/></svg>
       </a>
 
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/@isublockchain" target="_blank" rel="noopener" data-utm="youtube"
-         data-reveal class="pill">
-        <span class="pill-icon">
-          <svg class="w-[22px] h-[22px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg>
-        </span>
+      <a href="https://www.youtube.com/@isublockchain" target="_blank" rel="noopener" data-utm="youtube" data-reveal class="pill">
+        <span class="pill-icon"><svg class="w-[22px] h-[22px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor"/></svg></span>
         YouTube
         <svg class="pill-dots" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="18" r="1.6"/></svg>
       </a>
 
-      <!-- X -->
-      <a href="https://x.com/isublockchain" target="_blank" rel="noopener" data-utm="x"
-         data-reveal class="pill">
-        <span class="pill-icon">
-          <svg class="w-[18px] h-[18px] text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </span>
+      <a href="https://x.com/isublockchain" target="_blank" rel="noopener" data-utm="x" data-reveal class="pill">
+        <span class="pill-icon"><svg class="w-[18px] h-[18px] text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
         X
         <svg class="pill-dots" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="18" r="1.6"/></svg>
       </a>
 
-      <!-- ISU Blockchain & Finance Club (web sitesi) -->
-      <a href="https://isublockchain.tech/" target="_blank" rel="noopener" data-utm="web"
-         data-reveal class="pill">
-        <span class="pill-icon" style="background:#0A0518; border:1px solid rgba(255,255,255,0.25);">
-          <svg class="w-[14px] h-[14px]" viewBox="0 0 100 100" fill="none" stroke="#1E5BFF" stroke-width="11" stroke-linejoin="round"><polygon points="50,10 86,30 86,70 50,90 14,70 14,30"/></svg>
+      <a href="https://isublockchain.tech/" target="_blank" rel="noopener" data-utm="web" data-reveal class="pill">
+        <span class="pill-icon" style="background:#0A1539; border:1px solid rgba(255,255,255,0.25);">
+          <svg class="w-[14px] h-[14px]" viewBox="0 0 100 100" fill="none" stroke="#3B9EFF" stroke-width="11" stroke-linejoin="round"><polygon points="50,10 86,30 86,70 50,90 14,70 14,30"/></svg>
         </span>
         ISU Blockchain &amp; Finance Club
         <svg class="pill-dots" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="18" r="1.6"/></svg>
       </a>
 
-      <!-- Luma -->
-      <a href="https://luma.com/user/isublockchain" target="_blank" rel="noopener" data-utm="luma"
-         data-reveal class="pill">
+      <a href="https://luma.com/user/isublockchain" target="_blank" rel="noopener" data-utm="luma" data-reveal class="pill">
         <span class="pill-icon" style="background: linear-gradient(135deg, #FFB199 0%, #FF6B6B 60%, #B91C1C 100%);">
           <svg class="w-[14px] h-[14px] text-white" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
         </span>
@@ -214,60 +223,168 @@
 
     </div>
 
-    <!-- ETKİNLİK HAKKINDA — ŞEMA -->
-    <section class="mt-12" data-reveal>
-      <div class="text-center mb-6">
-        <p class="text-[10px] uppercase tracking-[0.3em] text-white/55">Etkinlik Hakkında</p>
-        <h2 class="text-[19px] font-bold tracking-tight mt-2">Beş Tema, Bir Gün</h2>
-        <p class="text-[12px] text-white/55 mt-1.5 italic px-2 leading-snug">
-          Web3 ekosisteminin geleceğini şekillendiren ana başlıklar
-        </p>
+    <!-- AKIŞ — DOLU TIMELINE -->
+    <section id="akis" class="mt-12 scroll-mt-20" data-reveal>
+      <div class="text-center mb-2">
+        <p class="text-[10px] uppercase tracking-[0.3em] text-sky-brand">Program</p>
+        <h2 class="display font-bold text-[26px] sm:text-[30px] tracking-tight mt-1">Akış</h2>
       </div>
+      <div class="hairline mx-auto max-w-[60%] mb-6"></div>
+
+      <ol class="space-y-[14px]">
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">11.30 – 12.00</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Kayıt &amp; Karşılama</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">12.00 – 12.05</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">İlksen Aden Kömürcü</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Açılış · Kulüp Başkanı</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">12.05 – 12.10</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Dr. Öğr. Üyesi Merve Yurdabak</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Açılış · Kulüp Danışman Hocası</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">12.10 – 12.50</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Gaye Çalışkaner</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">IBM · Strategy Designer</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">12.50 – 13.10</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Emine Zengin</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Odeabank · BT Yönetişim Müdürü</p>
+        </li>
+
+        <li class="tl-item tl-pause opacity-70" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">13.10 – 13.20</p>
+          <p class="display italic text-[14.5px] text-white/75 mt-0.5">Kahve arası &amp; networking</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">13.20 – 13.40</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Sinancan Öztürk</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Rlay Hub · Kurucu</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">13.40 – 13.50</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Samet Dökmeci</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Chainlink Türkiye · Community Manager</p>
+        </li>
+
+        <li class="tl-item tl-pause opacity-70" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">13.50 – 14.00</p>
+          <p class="display italic text-[14.5px] text-white/75 mt-0.5">Mola</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">14.00 – 14.20</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Dr. Irmak Yolcu</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">İstanbul Blockchain Women (IBW) · Yönetim Kurulu Üyesi</p>
+        </li>
+
+        <li class="tl-item tl-pause opacity-70" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">14.20 – 14.40</p>
+          <p class="display italic text-[14.5px] text-white/75 mt-0.5">Öğle arası &amp; networking</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">14.40 – 15.00</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Hürsel Çay</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Avalanche Team1 Türkiye · Country Lead</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">15.00 – 15.40</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Turan Sert &amp; Merve Yurdabak</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Q&amp;A oturumu</p>
+        </li>
+
+        <li class="tl-item tl-pause opacity-70" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">15.40 – 15.50</p>
+          <p class="display italic text-[14.5px] text-white/75 mt-0.5">Kahve arası &amp; networking</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">15.50 – 16.10</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Oya Aydınlık</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Odeabank · Yönetim Kurulu Üyesi</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <span class="tl-line"></span>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">16.10 – 16.40</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Hüseyin Çam</p>
+          <p class="display italic text-[12.5px] text-white/60 mt-0.5">Turkish Technology · IT Team Lead</p>
+        </li>
+
+        <li class="tl-item" data-reveal>
+          <p class="display italic text-sky-brand text-[14px] tabular-nums">16.40 – 16.45</p>
+          <p class="display font-semibold text-[16px] mt-0.5 leading-snug">Kapanış</p>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ETKİNLİK HAKKINDA — 5 TEMA ŞEMASI -->
+    <section class="mt-14" data-reveal>
+      <div class="text-center mb-2">
+        <p class="text-[10px] uppercase tracking-[0.3em] text-sky-brand">Etkinlik Hakkında</p>
+        <h2 class="display font-bold text-[24px] sm:text-[28px] tracking-tight mt-1">Beş Tema, Bir Gün</h2>
+      </div>
+      <div class="hairline mx-auto max-w-[60%] mb-6"></div>
 
       <ol class="space-y-2.5">
 
-        <!-- Yapay Zeka -->
-        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start"
-            style="background: rgba(155,100,220,0.10); border: 1px solid rgba(255,255,255,0.14);">
-          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center"
-                style="background: rgba(180,130,240,0.32); border: 1px solid rgba(255,255,255,0.18);">
+        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start glass">
+          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center" style="background: rgba(59,158,255,0.22); border: 1px solid rgba(59,158,255,0.35);">
             <svg class="w-[18px] h-[18px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a4 4 0 0 0-4 4v.5A3.5 3.5 0 0 0 6 13a3.5 3.5 0 0 0 2 6.32V20a2 2 0 0 0 4 0V6a4 4 0 0 0 0-4z"/>
               <circle cx="9.5" cy="9" r="0.6" fill="currentColor"/>
-              <path d="M12 2v18M8.5 13l3.5-1.5"/>
             </svg>
           </span>
           <div class="flex-1 min-w-0">
-            <h3 class="text-[14px] font-semibold tracking-tight">Yapay Zeka</h3>
-            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">
-              Üretken AI'nın finans ve blockchain ekosistemiyle kesişimi
-            </p>
+            <h3 class="display text-[15px] font-semibold tracking-tight">Yapay Zeka</h3>
+            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">Üretken AI'nın finans ve blockchain ile kesişimi</p>
           </div>
         </li>
 
-        <!-- Finans -->
-        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start"
-            style="background: rgba(155,100,220,0.10); border: 1px solid rgba(255,255,255,0.14);">
-          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center"
-                style="background: rgba(155,100,220,0.32); border: 1px solid rgba(255,255,255,0.18);">
+        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start glass">
+          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center" style="background: rgba(59,158,255,0.22); border: 1px solid rgba(59,158,255,0.35);">
             <svg class="w-[18px] h-[18px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 17l6-6 4 4 8-8"/>
-              <path d="M14 7h7v7"/>
+              <path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/>
             </svg>
           </span>
           <div class="flex-1 min-w-0">
-            <h3 class="text-[14px] font-semibold tracking-tight">Finans</h3>
-            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">
-              Geleneksel finansın dijital dönüşümü ve kripto piyasaları
-            </p>
+            <h3 class="display text-[15px] font-semibold tracking-tight">Finans</h3>
+            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">Geleneksel finansın dijital dönüşümü ve kripto piyasaları</p>
           </div>
         </li>
 
-        <!-- Blockchain -->
-        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start"
-            style="background: rgba(155,100,220,0.10); border: 1px solid rgba(255,255,255,0.14);">
-          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center"
-                style="background: rgba(120,80,200,0.38); border: 1px solid rgba(255,255,255,0.18);">
+        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start glass">
+          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center" style="background: rgba(59,158,255,0.22); border: 1px solid rgba(59,158,255,0.35);">
             <svg class="w-[18px] h-[18px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
               <polygon points="12,3 21,8 21,16 12,21 3,16 3,8"/>
               <polyline points="3,8 12,13 21,8"/>
@@ -275,18 +392,13 @@
             </svg>
           </span>
           <div class="flex-1 min-w-0">
-            <h3 class="text-[14px] font-semibold tracking-tight">Blockchain</h3>
-            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">
-              Merkeziyetsiz altyapı, akıllı kontratlar ve dApp ekosistemi
-            </p>
+            <h3 class="display text-[15px] font-semibold tracking-tight">Blockchain</h3>
+            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">Merkeziyetsiz altyapı, akıllı kontratlar ve dApp ekosistemi</p>
           </div>
         </li>
 
-        <!-- Kariyer -->
-        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start"
-            style="background: rgba(155,100,220,0.10); border: 1px solid rgba(255,255,255,0.14);">
-          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center"
-                style="background: rgba(190,150,250,0.30); border: 1px solid rgba(255,255,255,0.18);">
+        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start glass">
+          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center" style="background: rgba(59,158,255,0.22); border: 1px solid rgba(59,158,255,0.35);">
             <svg class="w-[18px] h-[18px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="7" width="18" height="13" rx="2"/>
               <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
@@ -294,79 +406,55 @@
             </svg>
           </span>
           <div class="flex-1 min-w-0">
-            <h3 class="text-[14px] font-semibold tracking-tight">Kariyer</h3>
-            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">
-              Web3 dünyasında iş bulma yolları, networking ve fırsat keşfi
-            </p>
+            <h3 class="display text-[15px] font-semibold tracking-tight">Kariyer</h3>
+            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">Web3 dünyasında iş bulma yolları, networking ve fırsat keşfi</p>
           </div>
         </li>
 
-        <!-- Web3 -->
-        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start"
-            style="background: rgba(155,100,220,0.10); border: 1px solid rgba(255,255,255,0.14);">
-          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center"
-                style="background: rgba(100,60,180,0.42); border: 1px solid rgba(255,255,255,0.18);">
+        <li class="rounded-xl py-3 px-3.5 flex gap-3 items-start glass">
+          <span class="shrink-0 h-9 w-9 rounded-lg flex items-center justify-center" style="background: rgba(59,158,255,0.22); border: 1px solid rgba(59,158,255,0.35);">
             <svg class="w-[18px] h-[18px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
               <circle cx="12" cy="12" r="9"/>
               <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
             </svg>
           </span>
           <div class="flex-1 min-w-0">
-            <h3 class="text-[14px] font-semibold tracking-tight">Web3</h3>
-            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">
-              Token ekonomisi, DAO'lar ve geleceğin merkeziyetsiz interneti
-            </p>
+            <h3 class="display text-[15px] font-semibold tracking-tight">Web3</h3>
+            <p class="text-[11.5px] text-white/65 leading-snug mt-0.5">Token ekonomisi, DAO'lar ve geleceğin merkeziyetsiz interneti</p>
           </div>
         </li>
-
       </ol>
 
       <!-- Mini stat strip -->
       <div class="mt-5 grid grid-cols-3 gap-2 text-center">
-        <div class="rounded-lg py-2.5 px-1" style="background: rgba(155,100,220,0.08); border: 1px solid rgba(255,255,255,0.10);">
-          <p class="text-[15px] font-bold tracking-tight tabular-nums">4.5</p>
-          <p class="text-[9px] uppercase tracking-[0.18em] text-white/55 mt-0.5">saat</p>
+        <div class="glass rounded-lg py-2.5 px-1">
+          <p class="display text-[20px] font-bold tabular-nums">5+</p>
+          <p class="text-[9px] uppercase tracking-[0.18em] text-sky-brand mt-0.5">saat</p>
         </div>
-        <div class="rounded-lg py-2.5 px-1" style="background: rgba(155,100,220,0.08); border: 1px solid rgba(255,255,255,0.10);">
-          <p class="text-[15px] font-bold tracking-tight tabular-nums">5</p>
-          <p class="text-[9px] uppercase tracking-[0.18em] text-white/55 mt-0.5">tema</p>
+        <div class="glass rounded-lg py-2.5 px-1">
+          <p class="display text-[20px] font-bold tabular-nums">10</p>
+          <p class="text-[9px] uppercase tracking-[0.18em] text-sky-brand mt-0.5">konuşmacı</p>
         </div>
-        <div class="rounded-lg py-2.5 px-1" style="background: rgba(155,100,220,0.08); border: 1px solid rgba(255,255,255,0.10);">
-          <p class="text-[15px] font-bold tracking-tight">∞</p>
-          <p class="text-[9px] uppercase tracking-[0.18em] text-white/55 mt-0.5">network</p>
+        <div class="glass rounded-lg py-2.5 px-1">
+          <p class="display text-[20px] font-bold tabular-nums">5</p>
+          <p class="text-[9px] uppercase tracking-[0.18em] text-sky-brand mt-0.5">tema</p>
         </div>
-      </div>
-    </section>
-
-    <!-- AKIŞ (boş placeholder — Aden bitirince eklenecek) -->
-    <section class="mt-10" data-reveal>
-      <div class="text-center mb-4">
-        <p class="text-[10px] uppercase tracking-[0.3em] text-white/55">Akış</p>
-        <h2 class="text-[19px] font-bold tracking-tight mt-2">Program</h2>
-      </div>
-
-      <div class="rounded-2xl border border-dashed border-white/22 py-9 px-5 text-center relative overflow-hidden"
-           style="background: rgba(155,100,220,0.06);">
-        <!-- subtle pulsing dot -->
-        <span class="inline-flex items-center gap-2 mb-2">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-60" style="background:#C4B5FD;"></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full" style="background:#C4B5FD;"></span>
-          </span>
-          <span class="text-[10px] uppercase tracking-[0.22em] text-white/65">Güncelleniyor</span>
-        </span>
-        <p class="text-[15px] text-white/85 italic display mt-1">Akış yakında burada</p>
-        <p class="text-[11.5px] text-white/45 mt-1 italic">Sunum sırası ve konuşmacılar son şeklini alıyor</p>
       </div>
     </section>
 
     <!-- LİNKTREE PILL CTA -->
-    <div class="mt-8 flex justify-center" data-reveal>
+    <div class="mt-10 flex justify-center" data-reveal>
       <a href="https://linktr.ee/beyondthechain" target="_blank" rel="noopener" data-utm="linktree" class="pill-cta">
         <span class="mr-1.5 text-white/80" aria-hidden="true">✱</span>
         Linktree'de beyondthechain ile katılın
       </a>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="mt-10 text-center">
+      <div class="hairline mx-auto max-w-[60%] mb-4"></div>
+      <p class="display italic text-[12px] text-white/55">İSÜ Blockchain ve Finans Kulübü · 2026</p>
+    </footer>
 
   </main>
 
